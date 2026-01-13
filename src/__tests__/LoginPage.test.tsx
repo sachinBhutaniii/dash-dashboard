@@ -10,6 +10,7 @@ const PasswordPlaceHolder =  "Enter your password";
 describe("LoginPage", () => {
   it("renders login form fields", () => {
     render(<LoginPage />);
+    
     expect(screen.getByPlaceholderText(EmailPlaceHolder)).toBeInTheDocument();
     expect(screen.getByPlaceholderText(PasswordPlaceHolder)).toBeInTheDocument();
     expect(screen.getByRole("button", { name: /sign in/i })).toBeInTheDocument(); // where name is sign in,  /i means case sensitive
